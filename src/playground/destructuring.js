@@ -16,14 +16,38 @@
 // const {temp: temperature, city} = person.location;
 // console.log(`It is ${temperature} in ${city}.`);
 
-const book = {
-    title: 'Ego Book',
-    author: 'Ryan',
-    publisher: {
+// const book = {
+//     title: 'Ego Book',
+//     author: 'Ryan',
+//     publisher: {
+//         name: 'Penguin',
+//     }
+// };
+//
+// const { name: publisherName = 'Self-Published' } = book.publisher;
+//
+// console.log(publisherName);
 
-    }
-};
+const address = [
+    '1299 s Juniper Street',
+    'Phili',
+    'Penny',
+    'HU67df'
+];
 
-const { name: publisherName = 'Self-Published' } = book.publisher;
+const [, city, state = 'New York'] = address;
 
-console.log(publisherName);
+console.log(`You are in ${city} ${state}.`);
+
+
+
+const item = [
+    'Coffee',
+    '£2',
+    '£3',
+    '£5'
+];
+
+const [name, , med] = item;
+
+console.log(`A medium ${name} costs ${med}`);
