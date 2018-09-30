@@ -10,7 +10,7 @@ const decrementCount = ({ decrementBy = 1 } = {}) => ({
     decrementBy
 });
 
-const setCount = ({ count = 0 } = {}) => ({
+const setCount = ({ count }) => ({
     type: 'SET',
     count
 });
@@ -55,7 +55,7 @@ store.dispatch(decrementCount({decrementBy: 1}));
 
 store.dispatch(resetCount());
 
-store.dispatch(setCount({count:4}));
+store.dispatch(setCount({count:-4}));
 
 
 console.log( store.getState( store.getState() ) );
