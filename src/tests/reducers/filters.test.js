@@ -30,30 +30,31 @@ test('should set sortBy to date', () => {
 });
 
 test('should set text filter', () => {
-    const textFilter = {
+    const text = 'My Filter Text';
+    const action = {
         type: 'SET_TEXT_FILTER',
-        text: 'Rent'
+        text
     }
-    const state = filtersReducer(undefined, textFilter);
-    expect(state.text).toBe('Rent');
+    const state = filtersReducer(undefined, action);
+    expect(state.text).toBe(text);
 });
 
 test('should set startDate filter', () => {
-    const date = moment().startOf('month');
+    const startDate = moment().startOf('month');
     const dateFilter = {
         type: 'SET_START_DATE',
-        startDate: date
+        startDate
     }
     const state = filtersReducer(undefined, dateFilter);
-    expect(state.startDate).toBe(date);
+    expect(state.startDate).toBe(startDate);
 });
 
 test('should set endtDate filter', () => {
-    const date = moment().startOf('month');
+    const endDate = moment().startOf('month');
     const dateFilter = {
         type: 'SET_END_DATE',
-        endDate: date
+        endDate
     }
     const state = filtersReducer(undefined, dateFilter);
-    expect(state.endDate).toBe(date);
+    expect(state.endDate).toBe(endDate);
 });
