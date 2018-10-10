@@ -41,20 +41,20 @@ test('should set text filter', () => {
 
 test('should set startDate filter', () => {
     const startDate = moment().startOf('month');
-    const dateFilter = {
+    const action = {
         type: 'SET_START_DATE',
         startDate
     }
-    const state = filtersReducer(undefined, dateFilter);
+    const state = filtersReducer(undefined, action);
     expect(state.startDate).toBe(startDate);
 });
 
 test('should set endtDate filter', () => {
     const endDate = moment().startOf('month');
-    const dateFilter = {
+    const action = {
         type: 'SET_END_DATE',
         endDate
     }
-    const state = filtersReducer(undefined, dateFilter);
+    const state = filtersReducer(undefined, action);
     expect(state.endDate).toBe(endDate);
 });
