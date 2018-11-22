@@ -55,12 +55,8 @@ export const startSetExpenses = () => {
                     ...childSnapshot.val()
                 });
             });
-            
+
             dispatch(setExpenses(expenses));
         })
     };
 };
-
-//fetch all expenses at once
-//parse to array
-//dispatch SET_EXPENSES
