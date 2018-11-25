@@ -49,7 +49,7 @@ test('should set startDate filter', () => {
     expect(state.startDate).toBe(startDate);
 });
 
-test('should set endtDate filter', () => {
+test('should set endDate filter', () => {
     const endDate = moment().startOf('month');
     const action = {
         type: 'SET_END_DATE',
